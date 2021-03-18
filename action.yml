@@ -1,0 +1,23 @@
+name: 'Deploy version to Spongepowered Ore'
+description: 'Automate deployment of updates to https://ore.spongepowered.org'
+inputs:
+  ore_api_key:
+    description: 'API key for Ore with "create_version" permission'
+    required: true
+  plugin_id:
+    description: 'Plugin id of the project to create a new version for'
+    required: true
+  release_file:
+    description: 'Path to the jar/zip file to release'
+    required: true
+  version_description:
+    descirption: 'Release notes to publish with the version'
+    required: true
+  create_post:
+    description: 'Post a forum post with the release notes'
+    default: "false"
+runs:
+  using: 'composite'
+  steps:
+    - run: ${{ github.action_path }}/deploy.sh
+      shell: bash
