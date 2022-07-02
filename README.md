@@ -1,2 +1,3 @@
-# deploy-to-spongepowered-ore
-Github action for deploying plugin versions to Ore https://ore.spongepowered.org/
+# Archived
+
+This action was never finished. Use https://github.com/dualspiral/ore-upload-action instead, it is a fully functional action.
